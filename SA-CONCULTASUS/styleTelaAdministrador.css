@@ -1,0 +1,387 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+#container {
+    height: 100%;
+}
+
+    #cabecalho{
+        height: 10%;
+        width: 100%;
+        background-color: whitesmoke;
+        display: flex;
+    }
+        #parteLogo{
+            height: 100%;
+            width: 50%;
+            background-color: darkcyan;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+            #idlogo{
+                height: 130px;
+                width: 130px;
+                padding-top: 18px;
+            }
+        #parteSair{
+            height: 100%;
+            width: 50%;
+            background-color: darkcyan;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+            #sairDaconta{
+                border-radius: 10px;
+                width: 120px;
+                height: 30px;
+                color: black;
+                font-weight: bold;
+                background-color: whitesmoke;
+                border: solid 2px;
+                border-color: darkred;
+                font-size: 15px;
+                cursor: pointer;
+                margin: 10px 5px;
+                cursor: pointer;
+            }
+                #sairDaconta:hover{
+                    background-color: darkred;
+                    color: white;
+                    font-weight: bolder;
+                    cursor: pointer;
+                }
+
+    #corpo{
+        height: 85%;
+        width: 100%;
+        background-color: whitesmoke;
+        display: flex;
+    }
+        #parteGerencia{
+            height: 100%;
+            width: 29%;
+            background-color: darkslategray;
+        }
+
+            #parteFoto{
+                height: 25%;
+                width: 100%;
+                background-color: darkolivegreen;
+                display: flex;
+            }
+
+                #esquerdaFoto{
+                    height: 100%;
+                    width: 30%;
+                    background-color: whitesmoke;
+                }
+                #foto{
+                    height: 100%;
+                    width: 40%;
+                    background-color: whitesmoke;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                    #fotoAdmin{
+                        height: 180px;
+                        width: 180px;
+                        padding-left: 8px;
+                    }
+                #direitaFoto{
+                    height: 100%;
+                    width: 30%;
+                    background-color: whitesmoke;
+                }
+
+            .separador{
+                height: 2%;
+                width: 100%;
+                background-color: darkcyan;
+            }
+
+            #parteNome{
+                height: 16%;
+                width: 100%;
+                background-color: whitesmoke;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+                .labelAdm{
+                    font-size: 20px;
+                    font-weight: bolder;
+                    color: #696969;
+                }
+
+            #parteMenu{
+                height: 55%;
+                width: 100%;
+                background-color: dimgray;
+            }
+
+                #opcaoServico{
+                    height: 48%;
+                    width: 100%;
+                    background-color: whitesmoke;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                #separadorOpcao{
+                    height: 4%;
+                    width: 100%;
+                    background-color: darkcyan;
+                }
+                #opcaoSemanas{
+                    height: 48%;
+                    width: 100%;
+                    background-color: whitesmoke;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .botaoMenu{
+                    height: 60px;
+                    width: 250px;
+                    background-color: whitesmoke;
+                    color: darkcyan;
+                    font-size: 20px;
+                    font-weight: bold;
+                    border-radius: 20px;
+                    border: solid 3px;
+                    border-color: darkcyan;
+                    cursor: pointer;
+                }
+                    .botaoMenu:hover{
+                        color: white;
+                        background-color: darkcyan;
+                        border-color: darkgray;
+                        font-weight: bolder;
+                        transform: scale(1.1);
+                        cursor: pointer;
+                    }
+
+        #separadorLados{
+            height: 100%;
+            width: 2%;
+            background-color: darkcyan;
+        }
+
+        #parteConteudo{
+            height: 100%;
+            width: 69%;
+            background-image: url(fundoLogin.png);
+        }
+            #containerOpcoes{
+                height: 20%;
+                width: 100%;
+                background-color: transparent;
+            }
+                #opcoes{
+                    height: 100%;
+                    width: 100%;
+                    background-color: transparent;
+                    display: flex;
+                }
+                    .separadorOpcoesDireita{
+                        height: 100%;
+                        width: 1%;
+                        background-color: transparent;
+                    }
+
+                    #containerSelecionarDia{
+                        height: 100%;
+                        width: 32%;
+                        background-color: transparent;
+                    }
+                    #containerSelecionarServico{
+                        height: 100%;
+                        width: 32%;
+                        background-color: transparent;
+                    }
+                    #containerSelecionarBairro{
+                        height: 100%;
+                        width: 32%;
+                        background-color: transparent;
+                    }
+                    .opcoesDireita{
+                        height: 100%;
+                        width: 100%;
+                        background-color: transparent;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                        #escolherBairroAdm{
+                            height: 45px;
+                            width: 250px;
+                            font-size: 20px;
+                            font-weight: bold;
+                            border-radius: 10px;
+                            border: solid 3px;
+                            border-color: whitesmoke;
+                            background-color: darkcyan;
+                            color: white;
+                            cursor: pointer;
+                        }
+                        #escolherServicoAdm{
+                            height: 45px;
+                            width: 250px;
+                            font-size: 20px;
+                            font-weight: bold;
+                            border-radius: 10px;
+                            border: solid 3px;
+                            border-color: whitesmoke;
+                            background-color: darkcyan;
+                            color: white;
+                            cursor: pointer;
+                        }
+                        #escolherDiaAdm{
+                            height: 45px;
+                            width: 250px;
+                            font-size: 20px;
+                            font-weight: bold;
+                            border-radius: 10px;
+                            border: solid 3px;
+                            border-color: whitesmoke;
+                            background-color: darkcyan;
+                            color: white;
+                            cursor: pointer;
+                        }
+
+            #separadorOpcoes{
+                height: 2%;
+                width: 100%;
+                background-color: darkcyan;
+            }
+            #exibirConteudo{
+                height: 78%;
+                width: 100%;
+                background-color: transparent;
+            }
+                #confirmarAcao{
+                    height: 9%;
+                    width: 100%;
+                    background-color: transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                    .botaoConfirmacao{
+                        height: 30px;
+                        width: 150px;
+                        border: solid 1px;
+                        border-radius: 10px;
+                        border-color: whitesmoke;
+                        border-color: white;
+                        background-color: darkcyan;
+                        cursor: pointer;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: white;
+                        margin: 5px;
+                    }
+
+                #separadorAcao{
+                    height: 1%;
+                    width: 100%;
+                    background-color: darkcyan;
+                }
+                #conteudo{
+                    height: 90%;
+                    width: 100%;
+                    display: flex;  
+                }
+
+                #containerAgendamento{
+                    height: 100%;
+                    width: 35%;
+                    background-color: whitesmoke;
+                }
+                    #listaAgendamento{
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: start;
+                        align-items: start;
+                    }
+                        #pacientes{
+                            font-size: 15px;
+                            font-weight: bolder;
+                            color: black;
+                            padding-left: 5px;
+                        }
+
+                    #separadorAgendamento{
+                        height: 100%;
+                        width: 2%;
+                        background-color: darkcyan;
+                    }
+
+                    #containerSemanas{
+                        height: 100%;
+                        width: 63%;
+                        background-color: whitesmoke;
+                    }
+                        #listaSemanas{
+                            height: 100%;
+                            width: 100%;
+                        }
+                            .admSemanas{
+                                height: 19%;
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            .separadorSemanas{
+                                height: 1%;
+                                width: 100%;
+                                background-color: darkcyan;
+                            }
+                                .labelSemanas{
+                                    font-size: 30px;
+                                    font-weight: bolder;
+                                    color: black;
+                                }
+                                .botoesSemanas{
+                                    height: 30px;
+                                    width: 150px;
+                                    border: none;
+                                    border-radius: 10px;
+                                    background-color: darkcyan;
+                                    font-size: 16px;
+                                    color: whitesmoke;
+                                    font-weight: bolder;
+                                    margin-left: 20px;
+                                    cursor: pointer;
+                                }
+                                    .botoesSemanas:hover{
+                                        height: 32px;
+                                        width: 160px;
+                                        border: solid 2px;
+                                        border-color: darkcyan;
+                                        background-color: whitesmoke;
+                                        color: black;
+                                        font-size: 18px;
+                                        font-weight: bolder;
+                                        cursor: pointer;
+                                    }
+
+    #rodape{
+        height: 5%;
+        width: 100%;
+        background-color: darkcyan;
+    }

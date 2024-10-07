@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="styleTelaCadastro.css">
+</head>
+<body>
+
+    <div id="container">
+
+        <div id="cima">
+
+            <div id="logo">
+
+                <img id="idlogo" src="logoOficial.png" alt="">
+
+            </div>
+
+            <div id="titulo">
+
+                <label id="tituloPagina">Sistema de Cadastro</label>
+
+            </div>
+
+            <div id="fimTopo">
+
+                <label id="labelConta">Já tem uma conta?</label><a href="telaLogin.html"><button id="botaoTopo">Logar</button></a>
+
+            </div>
+
+        </div>
+
+        <div id="separador">
+
+        </div>
+
+        <div id="meio">
+
+            <div id="ladoEsquerdo">
+    
+            </div>
+
+            <div id="cadastro">
+                
+                <div id="telaCadastro">
+
+                    <div id="parteIdentificacao">
+
+                        <label id="idIdentificacao">Identificação</label>
+
+                        <label id="nome">Nome</label>
+                        <input id="nomeUsuario" type="text" class="classeInputs" placeholder="Digite seu nome completo">
+
+                        <label id="genero">Gênero</label>
+                        <select id="generoUsuario">
+                            <option value="0">Selecione uma opção</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+
+                        <label id="cpf">CPF</label>
+                        <input id="cpfUsuario" type="text" class="classeInputs" placeholder="00000000000" maxlength="11">
+
+                        <label id="nascimento">Nascimento</label>
+                        <input id="nascimentoUsuario" type="date" class="classeInputs">
+
+                    </div>
+
+                    <div id="parteContato">
+
+                        <label id="contato">Contato & Endereço</label>
+
+                        <label id="email">E-mail</label>
+                        <input id="emailUsuario" type="email" class="classeInputs" placeholder="exemploemail123@gmail.com">
+
+                        <label id="telefone">Telefone/Celular</label>
+                        <input id="telefoneUsuario" type="text" class="classeInputs" placeholder="(DDD) XXXXX XXXX ">
+
+                        <label id="bairro">Bairro</label>
+                        <select id="bairroUsuario">
+                            <option value="0">Selecione o bairro</option>
+                            <option value="Agronômica">Agronômica</option>
+                        </select>
+
+                        <label id="senha">Senha</label>
+                        <input id="senhaUsuario" type="password" class="classeInputs" placeholder="minímo seis (6) caracteres">
+                        
+                    </div>
+    
+                </div>
+                
+                <div id="botaoCadastrar">
+
+                    <button onclick="Cadastrar()" id="botaoCadastro">Cadastrar</button>
+    
+                </div>
+    
+            </div>
+
+            <div id="ladoDireito">
+    
+            </div>
+
+        </div>
+
+        <div id="baixo">
+
+        </div>
+
+    </div>
+
+    <script src="processamentoDados.js"></script>
+    
+</body>
+</html>

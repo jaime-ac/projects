@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="styleTelaPerfil.css">
+
+</head>
+<body onload="CarregarDadosPerfil()">
+
+    <div id="Container">
+
+        <div id="divDadosPerfil">
+
+            <div id="divFotoPerfil">
+
+                <div id="imagem">
+
+                    <div id="ladoEsquerdoImagem">
+
+                    </div>
+
+                    <div id="ladoImagem">
+
+                        <img id="imagemPerfil" src="2919600.png" alt="">
+
+                    </div>
+
+                    <div id="ladoDireitoImagem">
+
+                    </div>
+
+                </div>
+
+                <div id="nome">
+
+                    <label class="dadosPerfil">Nome: </label><label id="nomePerfil" class="labelIneditavel"></label>
+                    
+                </div>
+                
+                <div id="cpf">
+
+                    <label class="dadosPerfil">CPF: </label><label id="cpfPerfil" class="labelIneditavel"></label>
+
+                </div>
+
+                <div id="separadorFoto">
+
+                </div>
+
+            </div>
+
+            <div id="divGeneroPerfil">
+
+                <div class="tipoDado">
+
+                    <label class="dadosPerfil">Gênero:</label>
+
+                </div>
+
+                <div class="dados">
+
+                    <input type="text" id="generoPerfil" class="labelPerfil" disabled>
+
+                </div>
+
+                <div class="alterarDados">
+
+                    <button id="btnImgGen" onclick="EditarGenero()">
+
+                        <img id="imagEditGen" class="botaoEditar" src="ImgEdit.svg">
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div id="divNascimentoPerfil">
+
+                <div class="tipoDado">
+
+                    <label class="dadosPerfil">Nascimento:</label>
+
+                </div>
+
+                <div class="dados">
+
+                    <input type="date" id="nascimentoPerfil" disabled>
+
+                </div>
+
+                <div class="alterarDados">
+
+                    <button id="btnImgNasc" onclick="EditarNascimento()">
+
+                        <img id="imagEditNasc" class="botaoEditar" src="ImgEdit.svg">
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div id="divEmailPerfil">
+
+                <div class="tipoDado">
+
+                    <label class="dadosPerfil">E-mail:</label>
+
+                </div>
+
+                <div class="dados">
+
+                    <input type="email" id="emailPerfil" class="labelPerfil" disabled>
+
+                </div>
+
+                <div class="alterarDados">
+
+                    <button id="btnImgEmail" onclick="EditarEmail()">
+
+                        <img id="imagEditEmail" class="botaoEditar" src="ImgEdit.svg">
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div id="divTelefonePerfil">
+
+                <div class="tipoDado">
+
+                    <label class="dadosPerfil">Contato:</label>
+
+                </div>
+
+                <div class="dados">
+
+                    <input type="text" id="telefonePerfil" class="labelPerfil" disabled>
+
+                </div>
+
+                <div class="alterarDados">
+
+                    <button id="btnImgContato" onclick="EditarTelefone()">
+                    
+                        <img id="imagEditContato" class="botaoEditar" src="ImgEdit.svg">
+                    
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div id="divBairroPerfil">
+
+                <div class="tipoDado">
+
+                    <label class="dadosPerfil">Bairro:</label>
+
+                </div>
+
+                <div class="dados">
+
+                    <input type="text" id="bairroPerfil" class="labelPerfil" disabled>
+
+                </div>
+
+                <div class="alterarDados">
+
+                    <button id="btnImgBairro" onclick="EditarBairro()">
+                    
+                        <img id="imagEditBairro" class="botaoEditar" src="ImgEdit.svg">
+                    
+                    </button>
+
+                </div>
+
+            </div>
+            
+            <div id="divSenhaPerfil">
+
+                <div class="tipoDado">
+
+                    <label class="dadosPerfil">Senha:</label>
+
+                </div>
+
+                <div class="dados">
+
+                    <input type="password" id="senhaPerfil" class="labelPerfil" disabled>
+
+                </div>
+
+                <div class="alterarDados">
+
+                    <button id="btnImgSenha" onclick="EditarSenha()">
+                    
+                        <img id="imagEditSenha" class="botaoEditar" src="ImgEdit.svg">
+                    
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div id="divSalvarEdicao">
+
+            </div>
+
+            <div id="divFinalEsquerda">
+
+                <button onclick="Exclusao()" class="btnsEsquerda">Excluir conta</button>
+
+                <button id="botaoExcluirConta" style="display: none;" onclick="ExcluirConta()" class="btnsEsquerda">Confirmar exclusão</button>
+               
+            </div>
+
+        </div>
+
+        <div id="divDireita">
+
+            <div id="divDireitaCima">
+
+                <div id="divTopoEsquerda">
+
+                    <img id="idlogo" src="logoOficial.png" alt="">
+
+                </div>
+    
+                <div id="divTopoDireita">
+
+                    <button onclick="Sair()" id="sairDaconta">Sair</button>
+
+                </div>
+
+            </div>
+
+            <div id="separadorDireita">
+
+            </div>
+
+            <div id="divDireitaBaixo">
+
+                <div id="divSeparador0">
+
+                </div>
+
+                <div id="divHistorico">
+
+                    <div id="botaoHistorico">
+
+                        <button onclick="HistoricoConsultas()" class="botoesServicos">Visualizar Histórico</button>
+
+                    </div>
+
+                    <div id="separadorHistorico">
+
+                    </div>
+
+                    <div id="historico">
+
+                        <label id="labelHistorico">Meu histórico</label>
+
+                    </div>
+
+                </div>
+
+                <div id="divSeparador">
+
+                </div>
+
+                <div id="divAgendamento">
+
+                    <div id="botaoAgendamento">
+
+                        <button onclick="AgendarConsulta()" class="botoesServicos">Agendar Consulta</button>
+
+                    </div>
+
+                    <div id="separadorAgendamento">
+
+                    </div>
+
+                    <div id="agendamento">
+
+                        <div class="divServicos">
+
+                            <button id="consultaClinicoGeral" class="botaoServico" style="display: none;" onclick="AcessoClinicoGeral()">Clínico Geral</button>
+
+                        </div>
+
+                        <div class="separadorServicos">
+
+                        </div>
+
+                        <div class="divServicos">
+
+                        </div>
+
+                        <div class="separadorServicos">
+
+                        </div>
+
+                        <div class="divServicos">
+
+                        </div>
+
+                        <div id="separadorRodape">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script src="processamentoDados.js"></script>
+    
+</body>
+</html>

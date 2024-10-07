@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="styleTelaAdministrador.css">
+</head>
+<body onload="DadosAdministrador()">
+
+    <div id="container">
+
+        <div id="cabecalho">
+
+            <div id="parteLogo">
+
+                <img id="idlogo" src="logoOficial.png" alt="">
+
+            </div>
+
+            <div id="parteSair">
+
+                <button onclick="Sair()" id="sairDaconta">Sair</button>
+
+            </div>
+
+        </div>
+
+        <div id="corpo">
+
+            <div id="parteGerencia">
+
+                <div id="parteFoto">
+
+                    <div id="esquerdaFoto">
+
+                    </div>
+
+                    <div id="foto">
+
+                        <img id="fotoAdmin" src="fotoAdm.png" alt="">
+
+                    </div>
+
+                    <div id="direitaFoto">
+
+                    </div>
+
+                </div>
+
+                <div id="separador" class="separador">
+
+                </div>
+
+                <div id="parteNome">
+
+                    <label class="labelAdm" id="nomeAdministrador"></label>
+                    <label class="labelAdm" id="senhaAdministrador"></label>
+
+                </div>
+
+                <div id="separador" class="separador">
+
+                </div>
+
+                <div id="parteMenu">
+
+                    <div id="opcaoServico">
+
+                        <button class="botaoMenu" onclick="ConsultarAgendamentos()">Consultar Agendamentos</button>
+
+                    </div>
+
+                    <div id="separadorOpcao">
+
+                    </div>
+
+                    <div id="opcaoSemanas">
+
+                        <button class="botaoMenu" onclick="HabilitarSemanas()">Habilitar Semanas</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="separadorLados">
+
+            </div>
+
+            <div id="parteConteudo">
+
+                <div id="containerOpcoes">
+
+                    <div id="opcoes">
+
+                        <div class="separadorOpcoesDireita">
+
+                        </div>
+
+                        <div id="containerSelecionarBairro">
+
+                            <div id="selecionarBairro" class="opcoesDireita" style="visibility: hidden;">
+    
+                                <select id="escolherBairroAdm">
+                                    <option value="0">Selecione o bairro</option>
+                                    <option value="Agronômica">Agronômica</option>
+                                </select>
+                                
+                            </div>
+
+                        </div>
+                        
+                        <div class="separadorOpcoesDireita">
+
+                        </div>
+                        
+                        <div id="containerSelecionarServico">
+
+                            <div id="selecionarServico" class="opcoesDireita" style="visibility: hidden;">
+    
+                                <select id="escolherServicoAdm">
+    
+                                    <option value="0">Selecione um serviço</option>
+                                    <option value="clinicoGeral">Clínico Geral</option>
+                                    
+                                </select>
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="separadorOpcoesDireita">
+
+                        </div>
+
+                        <div id="containerSelecionarDia">
+
+                            <div id="selecionarDia" class="opcoesDireita" style="visibility: hidden;">
+    
+                                <select id="escolherDiaAdm">
+    
+                                    <option value="0">Selecione um dia</option>
+                                    <option value="2">2</option>
+                                    <option value="5">5</option>
+                                    <option value="5">7</option>
+                                    <option value="5">9</option>
+                                    <option value="5">12</option>
+                                    <option value="5">14</option>
+                                    <option value="5">16</option>
+                                    <option value="5">19</option>
+                                    <option value="5">21</option>
+                                    <option value="5">23</option>
+                                    <option value="5">26</option>
+                                    <option value="5">28</option>
+                                    <option value="5">30</option>
+                                    
+                                </select>
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="separadorOpcoesDireita">
+
+                        </div>
+    
+                    </div>
+                    
+                </div>
+
+                <div id="separadorOpcoes">
+
+                </div>
+
+                <div id="exibirConteudo">
+
+                    <div id="confirmarAcao">
+
+                        <button class="botaoConfirmacao" id="botaoAgendamentos" onclick="Agendamentos()" style="visibility: hidden;">Consultar</button>
+                        <button class="botaoConfirmacao" id="botaoCalendario" onclick="Calendario()" style="visibility: hidden;">Habilitar</button>
+
+                    </div>
+
+                    <div id="separadorAcao">
+
+                    </div>
+
+                    <div id="conteudo">
+
+                        <div id="containerAgendamento" style="visibility: hidden;">
+
+                            <div id="listaAgendamento">
+        
+                                <label id="pacientes"></label>
+        
+                            </div>
+
+                        </div>
+
+                        <div id="separadorAgendamento">
+
+                        </div>
+
+                        <div id="containerSemanas" style="visibility: hidden;">
+
+                            <div id="listaSemanas">
+
+                                <div class="admSemanas" id="botaoSemanaUm">
+    
+                                    <label class="labelSemanas">Semana 1</label>
+                                    <button id="habilitarSemanaUm" class="botoesSemanas" onclick="HabilitarSemanaUm()">Habilitar</button>
+                                    <button id="desabilitarSemanaUm" class="botoesSemanas" onclick="DesabilitarSemanaUm()">Desabilitar</button>
+    
+                                </div>
+    
+                                <div  class="separadorSemanas">
+    
+                                </div>
+    
+                                <div class="admSemanas" id="botaoSemanaDois">
+    
+                                    <label class="labelSemanas">Semana 2</label>
+                                    <button id="habilitarSemanaDois" class="botoesSemanas" onclick="HabilitarSemanaDois()">Habilitar</button>
+                                    <button id="desabilitarSemanaDois" class="botoesSemanas" onclick="DesabilitarSemanaDois()">Desabilitar</button>
+    
+                                </div>
+    
+                                <div class="separadorSemanas">
+    
+                                </div>
+    
+                                <div class="admSemanas" id="botaoSemanaTres">
+    
+                                    <label class="labelSemanas">Semana 3</label>
+                                    <button id="habilitarSemanaTres" class="botoesSemanas" onclick="HabilitarSemanaTres()">Habilitar</button>
+                                    <button id="desabilitarSemanaTres" class="botoesSemanas" onclick="DesabilitarSemanaTres()">Desabilitar</button>
+    
+                                </div>
+    
+                                <div class="separadorSemanas">
+    
+                                </div>
+    
+                                <div class="admSemanas" id="botaoSemanaQuatro">
+    
+                                    <label class="labelSemanas">Semana 4</label>
+                                    <button id="habilitarSemanaQuatro" class="botoesSemanas" onclick="HabilitarSemanaQuatro()">Habilitar</button>
+                                    <button id="desabilitarSemanaQuatro" class="botoesSemanas" onclick="DesabilitarSemanaQuatro()">Desabilitar</button>
+    
+                                </div>
+    
+                                <div class="separadorSemanas">
+    
+                                </div>
+    
+                                <div class="admSemanas" id="botaoSemanaCinco">
+    
+                                    <label class="labelSemanas">Semana 5</label>
+                                    <button id="habilitarSemanaCinco" class="botoesSemanas" onclick="HabilitarSemanaCinco()">Habilitar</button>
+                                    <button id="desabilitarSemanaCinco" class="botoesSemanas" onclick="DesabilitarSemanaCinco()">Desabilitar</button>
+    
+                                </div>
+    
+                                <div class="separadorSemanas">
+    
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="rodape">
+
+        </div>
+
+    </div>
+
+    <script src="processamentoDados.js"></script>
+    
+</body>
+</html>

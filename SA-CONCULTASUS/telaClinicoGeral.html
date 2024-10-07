@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínico Geral</title>
+    <link rel="stylesheet" href="styleTelaClinicoGeral.css">
+</head>
+<body onload="ClinicoGeralAgronomica()">
+
+    <div id="container">
+
+        <div id="corpo">
+
+            <div id="parteMedico">
+
+                <div id="logo">
+
+                    <img id="idlogo" src="logoOficial.png" alt="">
+                    
+                </div>
+
+                <div class="separadorMedico">
+
+                </div>
+
+                <div id="tituloDados">
+
+                    <label id="titulo">Dados do Serviço</label>
+
+                </div>
+
+                <div class="separadorMedico">
+
+                </div>
+
+                <div id="dadosServico">
+
+                    <div id="fotoMedico">
+
+                        <div id="fotoEsquerda">
+
+                        </div>
+
+                        <div id="foto">
+
+                            <img id="fotoPerfilMedico" src="fotoMedico.png" alt="">
+
+                        </div>
+
+                        <div id="fotoDireita">
+
+                        </div>
+
+                    </div>
+
+                    <div class="separadorMedico">
+
+                    </div>
+
+                    <div id="servico">
+
+                        <div class="dadoMedico" id="nome">
+
+                            <div class="tipoDado">
+
+                                <label class="labelMedico">Nome:</label>
+
+                            </div>
+
+                            <div class="dado">
+
+                                <label id="nomeMedico" class="dadoPerfilMedico"></label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="separadorDados">
+
+                        </div>
+
+                        <div class="dadoMedico" id="especialidade">
+
+                            <div class="tipoDado">
+
+                                <label class="labelMedico">Especialidade:</label>
+
+                            </div>
+
+                            <div class="dado">
+
+                                <label id="especialidadeMedico" class="dadoPerfilMedico"></label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="separadorDados">
+
+                        </div>
+
+                        <div class="dadoMedico" id="diasAtendimento">
+
+                            <div class="tipoDado">
+
+                                <label class="labelMedico">Dias:</label>
+
+                            </div>
+
+                            <div class="dado">
+
+                                <label id="diasMedico" class="dadoPerfilMedico"></label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="separadorDados">
+
+                        </div>
+
+                        <div class="dadoMedico" id="horario">
+
+                            <div class="tipoDado">
+
+                                <label class="labelMedico">Hora:</label>
+
+                            </div>
+
+                            <div class="dado">
+
+                                <label id="horarioMedico" class="dadoPerfilMedico"></label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="separadorDados">
+
+                        </div>
+
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div id="separador">
+
+            </div>
+
+            <div id="parteAgendamento">
+
+                <div id="topoAgendamento">
+
+                    <div id="esquerda">
+
+                        <button class="botaoTelaClinicoGeral" id="botaoVoltar" onclick="VoltarPerfil()">Voltar</button>
+
+                    </div>
+
+                    <div id="meio">
+
+                        <label id="nomeServico">Clínico Geral</label>
+
+                    </div>
+
+                    <div id="direita">
+
+                        <button class="botaoTelaClinicoGeral" id="botaoSair" onclick="Sair()">Sair</button>
+
+                    </div>
+
+                </div>
+
+                <div id="parteMes">
+
+                    <div id="parteEsquerda">
+
+                        <img class="direcao" src="anterior.svg" alt="">
+
+                    </div>
+
+                    <div id="nomeMes">
+
+                        <label id="mesAgendamento">Agosto</label>
+
+                    </div>
+
+                    <div id="parteDireita">
+
+                        <img class="direcao" src="seguinte.svg" alt="">
+
+                    </div>
+
+                </div>
+
+                <div id="separadorMes">
+
+                    <label id="mensagem">Escolha uma data...</Escolha></label>
+
+                </div>
+
+                <div id="containerCalendario" style="display: block;">
+ 
+                    <div id="calendario">
+
+                        <div id="ladoEsquerdo">
+
+                        </div>
+
+                        <div id="parteCalendario">
+
+                            <div id="diasSemana">
+
+                                <div id="domingo" class="caixas">
+
+                                    <label class="dias">Dom</label>
+
+                                </div>
+                                <div class="separadorCaixa">
+
+                                </div>
+
+                                <div id="segunda" class="caixas">
+
+                                    <label class="dias">Seg</label>
+
+                                </div>
+                                <div class="separadorCaixa">
+
+                                </div>
+
+                                <div id="terca" class="caixas">
+
+                                    <label class="dias">Ter</label>
+
+                                </div>
+                                <div class="separadorCaixa">
+
+                                </div>
+
+                                <div id="quarta" class="caixas">
+
+                                    <label class="dias">Qua</label>
+
+                                </div>
+                                <div class="separadorCaixa">
+
+                                </div>
+
+                                <div id="quinta" class="caixas">
+
+                                    <label class="dias">Qui</label>
+
+                                </div>
+                                <div class="separadorCaixa">
+
+                                </div>
+
+                                <div id="sexta" class="caixas">
+
+                                    <label class="dias">Sex</label>
+
+                                </div>
+                                <div class="separadorCaixa">
+
+                                </div>
+
+                                <div id="sabado" class="caixas">
+
+                                    <label class="dias">Sáb</label>
+
+                                </div>
+
+                            </div>
+
+                            <div class="separadorSemana">
+
+                            </div>
+
+                            <div id="containerSemanaUm" class="containerSemana" style="display: none;">
+
+                                <div id="semanaUm" class="semana">
+    
+                                    <div id="caixa01" class="caixas">
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa02" class="caixas">
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa03" class="caixas">
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa04" class="caixas">
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa1" class="caixas">
+    
+                                        <label class="diaSemana">1</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa2" class="caixas">
+    
+                                        <button id="dia2" onclick="AgendamentoDia2()" class="botaoDias" value="02"><label class="diaSemana">2</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa3" class="caixas">
+    
+                                        <label class="diaSemana">3</label>
+    
+                                    </div>
+    
+                                </div>
+    
+                                
+                            </div>
+
+                            <div class="separadorSemana">
+
+                            </div>
+                            
+                            <div id="containerSemanaDois" class="containerSemana" style="display: none;">
+
+                                <div id="semanaDois" class="semana">
+    
+                                    <div id="caixa4" class="caixas">
+    
+                                        <label class="diaSemana">4</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa5" class="caixas">
+    
+                                        <button id="dia5" onclick="AgendamentoDia5()" class="botaoDias"><label class="diaSemana">5</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa6" class="caixas">
+    
+                                        <label class="diaSemana">6</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa7" class="caixas">
+    
+                                        <button class="botaoDias"><label class="diaSemana">7</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa8" class="caixas">
+    
+                                        <label class="diaSemana">8</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa9" class="caixas">
+    
+                                        <button class="botaoDias"><label class="diaSemana">9</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa10" class="caixas">
+    
+                                        <label class="diaSemana">10</label>
+    
+                                    </div>
+    
+                                </div>
+
+                            </div>
+
+                            <div class="separadorSemana">
+
+                            </div>
+
+                            <div id="containerSemanaTres" class="containerSemana" style="display: none;">
+
+                                <div id="semanaTres" class="semana">
+    
+                                    <div id="caixa11" class="caixas">
+    
+                                        <label class="diaSemana">11</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa12" class="caixas">
+    
+                                        <button class="botaoDias"><label class="diaSemana">12</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa13" class="caixas">
+    
+                                        <label class="diaSemana">13</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa14" class="caixas">
+    
+                                        <button class="botaoDias"><label class="diaSemana">14</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa15" class="caixas">
+    
+                                        <label class="diaSemana">15</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa16" class="caixas">
+    
+                                        <button class="botaoDias"><label class="diaSemana">16</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa17" class="caixas">
+    
+                                        <label class="diaSemana">17</label>
+    
+                                    </div>
+    
+                                </div>
+
+                            </div>
+
+                            <div class="separadorSemana">
+
+                            </div>
+
+                            <div id="containerSemanaQuatro" class="containerSemana" style="display: none;">
+
+                                <div id="semanaQuatro" class="semana">
+    
+                                    <div id="caixa18" class="caixas">
+    
+                                        <label class="diaSemana">18</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa19" class="caixas">
+    
+                                        <button class="botaoDias"><label class="diaSemana">19</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa20" class="caixas">
+    
+                                        <label class="diaSemana">20</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa21" class="caixas">
+    
+                                        <button class="botaoDias"><label class="diaSemana">21</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa22" class="caixas">
+    
+                                        <label class="diaSemana">22</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa23" class="caixas">
+    
+                                        <button class="botaoDias"><label class="diaSemana">23</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa24" class="caixas">
+    
+                                        <label class="diaSemana">24</label>
+    
+                                    </div>
+    
+                                </div>
+
+                            </div>
+
+                            <div class="separadorSemana">
+
+                            </div>
+
+                            <div id="containerSemanaCinco" class="containerSemana" style="display: none;">
+
+                                <div id="semanaCinco" class="semana">
+    
+                                    <div id="caixa25" class="caixas">
+    
+                                        <label class="diaSemana">25</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa26" class="caixas">
+    
+                                        <button class="botaoDias"><label class="diaSemana">26</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa27" class="caixas">
+    
+                                        <label class="diaSemana">27</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa28" class="caixas">
+    
+                                        <button class="botaoDias"><label class="diaSemana">28</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa29" class="caixas">
+    
+                                        <label class="diaSemana">29</label>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa30" class="caixas">
+    
+                                        <button class="botaoDias"><label class="diaSemana">30</label></button>
+    
+                                    </div>
+                                    <div class="separadorCaixa">
+    
+                                    </div>
+    
+                                    <div id="caixa31" class="caixas">
+    
+                                        <label class="diaSemana">31</label>
+    
+                                    </div>
+    
+                                </div>
+
+                            </div>
+
+                            <div id="separadorCinco" class="separadorSemana">
+
+                            </div>
+
+                        </div>
+
+                        <div id="ladoDireito">
+
+                        </div>
+
+                    </div>
+
+                </div> 
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="processamentoDados.js"></script>
+    
+</body>
+</html>

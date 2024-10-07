@@ -1,0 +1,113 @@
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+#container {
+    height: 100%;
+}
+
+    #divtopo {
+        width: 100%;
+        height: 13%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1E90FF;
+    }
+        #topoesquerda {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding-top: 20px;
+        }
+            #logo{
+                height: 170px;
+                width: 170px;
+            }
+
+        #topodireita {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+            .botaoTopo {
+                height: 35px;
+                width: 140px;
+                border: solid 2px;
+                font-size: 18px;
+                font-weight: bold;
+                margin: 15px;
+                background-color: #008bfd;
+                cursor: pointer;
+                border-radius: 10px;
+                color: #FFFFFF;
+            }
+                .botaoTopo:hover {
+                    height: 35px;
+                    width: 140px;
+                    background-color: darkgreen;
+                    transform: scale(1.1);
+                }
+            
+
+    #divmeio {
+        width: 100%;
+        height: 50%; 
+        background-image: url('fundoPaginaInicial.png'); 
+        background-size: cover;
+        background-repeat: no-repeat; 
+    }
+
+    #divbaixo {
+        width: 100%;
+        height: 8%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1E90FF; 
+    }
+        .meu-botao {
+            height: 35px;
+            width: 160px;
+            border: solid 2px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px;
+            background-color: transparent;
+            cursor: pointer;
+            border-radius: 15px;
+            color: #FFFFFF;
+        }
+        .meu-botao:hover {
+            height: 35px;
+            width: 160px;
+            background-color: transparent;
+            transform: scale(1.1);
+        }
+
+    #texto {
+        width: 100%;
+        height: 29%; 
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        #texto label {
+            color: black;
+            font-weight: bolder;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
